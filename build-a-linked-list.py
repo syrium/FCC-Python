@@ -17,9 +17,9 @@ class LinkedList:
             self.head = node
         else:
             current_node = self.head
-            while current_node.next is not None:
-                current_node = current_node.next
-            current_node.next = node
+            while current_node.next is not None: # type: ignore
+                current_node = current_node.next # type: ignore
+            current_node.next = node # type: ignore
         self.length += 1
 
     def remove(self, element):
